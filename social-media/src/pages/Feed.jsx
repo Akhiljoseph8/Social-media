@@ -156,7 +156,7 @@ const Feed = () => {
     usenavigate("/");
   };
 
-
+  //Like handling function
   const handleLike = async (postId) => {
     try {
       const header = {
