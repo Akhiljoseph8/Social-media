@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken')
 
 exports.userRegister = async (req, res) => {
     const { username, email, password, phone } = req.body
-
     try {
         const existingUser = await users.findOne({ email })
         const phoneNumber = await users.findOne({ phone })
@@ -23,8 +22,10 @@ exports.userRegister = async (req, res) => {
     catch (err) {
         res.status(404).json(err)
     }
-
 }
+
+
+
 
 exports.userLogin = async (req, res) => {
     const { email, password } = req.body
